@@ -1,0 +1,70 @@
+.latest-overlay {
+  width: 750px;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  animation: overlayPop 0.6s cubic-bezier(.25,.8,.25,1);
+  pointer-events: auto;
+}
+
+@keyframes overlayPop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px 30px 20px;
+}
+
+.overlay-avatar {
+  font-size: 64px;
+  margin-bottom: 28px;
+}
+
+.overlay-text {
+  font-size: 32px;
+  line-height: 1.4;
+  color: #222;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+  word-break: break-word;
+  max-width: 100%;
+  letter-spacing: 0.2px;
+}
+
+.overlay-name {
+  font-size: 24px;
+  color: #444;
+  font-style: italic;
+  align-self: flex-end;
+  margin-top: auto;
+  font-weight: 500;
+}
